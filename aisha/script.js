@@ -33,7 +33,7 @@ welcomeForm.addEventListener("submit", function (event) {
 
     // انتقال به صفحه اصلی پروژه
     setTimeout(function () {
-        window.location.href = "index.html";
+        window.location.href = "../index/index.html.html";
     }, 1000);
 
 });
