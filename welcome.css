@@ -1,0 +1,405 @@
+/* Welcome page — Time Travel */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Tahoma, Arial, sans-serif;
+    direction: rtl;
+    color: #f4f5ff;
+    background:
+        radial-gradient(ellipse at 75% 45%, #202c63 0%, transparent 45%),
+        radial-gradient(ellipse at 15% 85%, #172d54 0%, transparent 40%),
+        linear-gradient(135deg, #080e20, #101a38 55%, #090f20);
+    overflow-x: hidden;
+}
+
+/* Header */
+
+.welcome-header {
+    width: 100%;
+    min-height: 90px;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+    background: rgba(8, 14, 32, .55);
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.brand-icon {
+    font-size: 35px;
+    color: #d4b77b;
+}
+
+.brand strong {
+    display: block;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.brand small {
+    display: block;
+    margin-top: 5px;
+    color: #aab6d2;
+    font-size: 12px;
+}
+
+.header-text {
+    color: #b9c5df;
+    font-size: 14px;
+}
+
+/* Main layout */
+
+.welcome-container {
+    max-width: 1250px;
+    min-height: 690px;
+    margin: auto;
+    padding: 65px 7%;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #d8bd82;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.welcome-content h1 {
+    font-size: clamp(48px, 6vw, 78px);
+    font-weight: 800;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.welcome-content h1 span {
+    color: #d9bd82;
+    text-shadow: 0 0 30px rgba(217,189,130,.25);
+}
+
+.welcome-content h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #c5d1ed;
+}
+
+.description {
+    max-width: 550px;
+    margin: 25px 0 30px;
+    color: #aebbd5;
+    font-size: 15px;
+    line-height: 2.3;
+}
+
+/* Welcome form */
+
+#welcomeForm {
+    max-width: 550px;
+}
+
+#welcomeForm label {
+    display: block;
+    margin-bottom: 12px;
+    color: #e5d3a8;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255,255,255,.07);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.input-group input::placeholder {
+    color: #8996b3;
+}
+
+.input-group input:focus {
+    border-color: #d9bd82;
+    box-shadow: 0 0 15px rgba(217,189,130,.15);
+}
+
+.input-group button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e3c98e, #b89555);
+    color: #111a30;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.input-group button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(217,189,130,.25);
+}
+
+#message {
+    margin-top: 13px;
+    color: #8f9fbd;
+    font-size: 12px;
+}
+
+/* Features */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.features strong {
+    color: #d9bd82;
+    font-size: 27px;
+}
+
+.features span {
+    color: #aebbd5;
+    font-size: 12px;
+}
+
+/* Time illustration */
+
+.time-visual {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-glow {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: #526cb5;
+    filter: blur(100px);
+    opacity: .3;
+}
+
+.orbit {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(217,189,130,.25);
+    border-radius: 50%;
+}
+
+.orbit-two {
+    width: 420px;
+    height: 420px;
+    border-color: rgba(160,181,235,.18);
+}
+
+.orbit-three {
+    width: 490px;
+    height: 490px;
+    border-style: dashed;
+    border-color: rgba(255,255,255,.1);
+}
+
+.hourglass {
+    position: relative;
+    z-index: 1;
+    font-size: 155px;
+    filter: drop-shadow(0 0 35px rgba(217,189,130,.5));
+    animation: float 4s ease-in-out infinite;
+}
+
+.time-label {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    color: #d9bd82;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.time-label small {
+    color: #94a4c5;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.floating-star {
+    position: absolute;
+    color: #e4cf9f;
+    font-size: 27px;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.star-one {
+    top: 55px;
+    right: 70px;
+}
+
+.star-two {
+    bottom: 120px;
+    left: 55px;
+    animation-delay: 1s;
+}
+
+.star-three {
+    top: 125px;
+    left: 70px;
+    animation-delay: 2s;
+}
+
+/* Footer */
+
+footer {
+    padding: 23px 15px;
+    text-align: center;
+    color: #8291af;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* Animations */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: .4;
+        transform: scale(.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+    .welcome-container {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+        gap: 20px;
+    }
+
+    .welcome-content {
+        text-align: center;
+    }
+
+    .description,
+    #welcomeForm {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .time-visual {
+        min-height: 390px;
+        transform: scale(.85);
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-header {
+        padding: 17px 5%;
+    }
+
+    .header-text {
+        font-size: 11px;
+    }
+
+    .welcome-content h1 {
+        font-size: 48px;
+    }
+
+    .welcome-content h2 {
+        font-size: 19px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    .features {
+        gap: 22px;
+    }
+
+    .time-visual {
+        min-height: 320px;
+        transform: scale(.7);
+    }
+
+    .orbit-three {
+        width: 430px;
+        height: 430px;
+    }
+}
